@@ -1,17 +1,25 @@
-function calcular(pc1y,pc1n,pc2y,pc2n,pc3y,pc3n) {
+//true = 1
+//false = 0
+var com1 = Number(prompt(`Este computador 1 está ligado? (LIGADO/TRUE = 1 ou DESLIGADO/FALSE = 0)`))
+var com2 = Number(prompt(`Este computador 2 está ligado? (LIGADO/TRUE = 1 ou DESLIGADO/FALSE = 0)`))
+var com3 = Number(prompt(`Este computador 3 está ligado? (LIGADO/TRUE = 1 ou DESLIGADO/FALSE = 0)`))
+var cont = 0
 
-    var pc1y = document.getElementById("pc1y").value
-    var pc1n = document.getElementById("pc1n").value
-    var pc2y = document.getElementById("pc2y").value
-    var pc2n = document.getElementById("pc2n").value
-    var pc3y = document.getElementById("pc3y").value
-    var pc3n = document.getElementById("pc3n").value
-    pc1y , pc1n , pc2y , pc2n , pc3y , pc3n = Number
-    var pcD = pc1n - pc2n - pc3n
-    var pcL = pc1y + pc2y + pc3y 
-    
-    resposta = pcD - pcL
-    var resposta = document.getElementById("resposta")
-    document.getElementById("resposta").innerHTML = `Computadores ligados: ${pcL} e desligados ${pcD}`
+if (com1 == 1) {
+    cont++
+}
+if (com2 == 1) {
+    cont++
+}
+if (com3 == 1) {
+    cont++
+}
 
+//realiza uma verificação sobre o valor, analisando a validade dele
+if (com1 > 1 || com2 > 1 || com3 > 1) {
+    console.log(`Digite um número válido ( 1 ou 0 )`)
+}
+else {
+    console.log(`Computadores ligados: ${cont}`)
+    console.log(`Computadores desligados: ${3 - cont}`)
 }
